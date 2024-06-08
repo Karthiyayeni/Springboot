@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                echo "This is Jenkins build."
+                bat 'mvn -B -DskipTests clean package'
             }
         }
     }
